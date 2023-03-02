@@ -2,36 +2,49 @@ import styled from "styled-components";
 
 export const OuterContainer = styled.div`
     width: clamp(300px, 90vw, 400px);
-    margin: 0 auto;
+    margin: 3rem auto;
+    padding: 1rem 0;
     background-color: white;
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.27); 
     box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.27);
-    height: 200px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position: relative;
 
     text-align: center;
 
     h3 {
         font-size: 12px;
+        span{
+            color: ${props => props.valid ? '#17623b' : '#dd2727'};
+        }
     }
 
 `;
 
-export const IBAN_Info_div = styled.div`
-    width: clamp(300px, 90vw, 350px);
+export const ResultDiv = styled.div`
+
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    align-items: center;
     margin: 0 auto;
-    border: solid green 1px;
-    height: 80%;
+    margin-top: 1rem;
+    padding: 1rem 0;
     border-radius: 10px;
+    width: clamp(300px, 90vw, 320px);
+    border: ${props => props.valid ? '#17623b' : '#dd2727'} 1px solid;
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+
 `;
 
+
 export const IBAN_Result_Title = styled.h3`
-    color: green;
+    color: ${props => props.valid ? '#17623b' : '#dd2727'};
     font-size: 12px;
 `;
+
+

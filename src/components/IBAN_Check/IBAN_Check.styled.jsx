@@ -2,11 +2,7 @@ import styled from "styled-components";
 
 export const OuterContainer = styled.div`
     text-align: center;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin-top: 5rem;
 
     h1 {
         color: #051990;
