@@ -22,8 +22,6 @@ function IBAN_Form() {
         setIBAN_Input('');
     }
 
-    console.log(IBAN);
-
   return (
     <Form_IBAN onSubmit={handleSubmit}>
        <label>

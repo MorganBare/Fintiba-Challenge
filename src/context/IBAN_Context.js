@@ -72,7 +72,7 @@ export const IBAN_Provider = ({ children }) => {
         // Turn the new IBAN with only numbers back into a string
         const checkIBAN = splitRearrangedIBAN.join('');
 
-        // Use the bigInt library to help turn the string into a number and use modulo to find the remainder
+        // Use the bigInt library to help turn the string into a number that is not in scientific notation and use modulo to find the remainder
         const num = bigInt(checkIBAN).mod(97);
 
         if (num.value === 1n){
