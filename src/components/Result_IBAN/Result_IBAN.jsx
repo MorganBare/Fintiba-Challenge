@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-pascal-case */
 import { useContext } from "react";
 import IBAN_Context from "../../context/IBAN_Context";
 
@@ -7,11 +6,11 @@ import crossmark from '../../assets/cross-mark.png'
 
 import {
     OuterContainer,
-    IBAN_Result_Title,
+    ResultTitle,
     ResultDiv,
-} from "./IBAN_Result.styled"
+} from "./Result_IBAN.styled"
 
-function IBAN_Result() {
+function Result_IBAN() {
 
   const { IBAN } = useContext(IBAN_Context);
 
@@ -20,10 +19,10 @@ function IBAN_Result() {
       <h3>IBAN Validation result for <span>{IBAN.IBAN}</span></h3>
       <ResultDiv valid={IBAN.isValid}>
         <img src={IBAN.isValid ? checkmark : crossmark} alt="" />
-        <IBAN_Result_Title valid={IBAN.isValid}>{IBAN.IBAN} is {IBAN.isValid ? 'a valid' : 'an invalid'} IBAN</IBAN_Result_Title>
+        <ResultTitle valid={IBAN.isValid}>{IBAN.IBAN} is {IBAN.isValid ? 'a valid' : 'an invalid'} IBAN</ResultTitle>
       </ResultDiv>
     </OuterContainer>
   )
 }
 
-export default IBAN_Result
+export default Result_IBAN;

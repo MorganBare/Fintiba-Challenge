@@ -8,11 +8,10 @@ export const GlobalStyle = createGlobalStyle`
 	border: 0;
 	font-size: 100%;
 	vertical-align: baseline;
-    font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-color: #e6e8ec;

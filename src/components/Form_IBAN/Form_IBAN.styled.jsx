@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Form_IBAN = styled.form`
+export const FormIBAN = styled.form`
     display: flex;
     justify-content: center;
     gap: .5rem;

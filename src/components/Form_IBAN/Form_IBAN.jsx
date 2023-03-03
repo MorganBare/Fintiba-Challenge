@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-pascal-case */
 
-import { Form_IBAN, Input_IBAN, Input_Submit } from "./IBAN_Form.styled"
+import { FormIBAN, Input_IBAN, Input_Submit } from "./Form_IBAN.styled"
 import { useContext, useEffect, useState } from "react";
 import IBAN_Context from "../../context/IBAN_Context";
 
-function IBAN_Form() {
+function Form_IBAN() {
 
     const [IBAN_Input, setIBAN_Input] = useState('');
 
@@ -23,7 +23,7 @@ function IBAN_Form() {
     }
 
   return (
-    <Form_IBAN onSubmit={handleSubmit}>
+    <FormIBAN onSubmit={handleSubmit}>
        <label>
             <Input_IBAN 
                 name="IBAN" 
@@ -35,8 +35,8 @@ function IBAN_Form() {
                 required/>
         </label>
         <Input_Submit type="submit" value="Submit" /> 
-    </Form_IBAN>
+    </FormIBAN>
   )
 }
 
-export default IBAN_Form
+export default Form_IBAN;

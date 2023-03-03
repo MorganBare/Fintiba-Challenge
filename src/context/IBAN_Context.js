@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-pascal-case */
 import { createContext, useState } from 'react'
 
 import bigInt from 'big-integer';
@@ -8,9 +7,9 @@ const IBAN_State = {
     isValid: false,
 }
 
-const IBAN_Context = createContext(IBAN_State);
+const IBAN_CONTEXT = createContext(IBAN_State);
 
-export const IBAN_Provider = ({ children }) => {
+export const IBAN_PROVIDER = ({ children }) => {
     const [IBAN, setIBAN] = useState(IBAN_State);
 
 
@@ -89,22 +88,20 @@ export const IBAN_Provider = ({ children }) => {
         // IBAN format in a regex expression
         const regex = /LI\d{17}[A-Z]{2}/;
 
-        checkSum(CleanedIBAN);
-
         /*Check if the IBAN is exactly 21 characters long, has a correct format, and the checksum is valid*/
         if(CleanedIBAN.length === 21 && CleanedIBAN.match(regex) && checkSum(CleanedIBAN)) {
-                setIBAN({ ...IBAN, isValid: true });
+                setIBAN({ IBAN: CleanedIBAN, isValid: true });
         
         } else {
-            setIBAN({ ...IBAN, isValid: false });
+            setIBAN({ IBAN: CleanedIBAN, isValid: false });
         }
     }
 
     return (
-        <IBAN_Context.Provider value={{ IBAN, setIBAN, Validate}}>
+        <IBAN_CONTEXT.Provider value={{ IBAN, setIBAN, Validate}}>
             {children}
-        </IBAN_Context.Provider>
+        </IBAN_CONTEXT.Provider>
     )
 }
 
-export default IBAN_Context
+export default IBAN_CONTEXT;

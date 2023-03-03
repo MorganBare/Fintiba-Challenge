@@ -42,7 +42,7 @@ export const ResultDiv = styled.div`
 `;
 
 
-export const IBAN_Result_Title = styled.h3`
+export const ResultTitle = styled.h3`
     color: ${props => props.valid ? '#17623b' : '#dd2727'};
     font-size: 12px;
 `;

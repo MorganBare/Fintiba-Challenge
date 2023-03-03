@@ -1,4 +1,4 @@
-import IBAN_Check from "./IBAN_Check/IBAN_Check";
-import IBAN_Result from "./IBAN_Result/IBAN_Result";
+import Check_IBAN from "./Check_IBAN/Check_IBAN"
+import Result_IBAN from "./Result_IBAN/Result_IBAN";
 
-export { IBAN_Check, IBAN_Result}
+export { Check_IBAN, Result_IBAN}
