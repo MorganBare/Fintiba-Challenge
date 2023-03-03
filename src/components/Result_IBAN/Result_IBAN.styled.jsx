@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const OuterContainer = styled.div`
-    width: clamp(300px, 90vw, 400px);
+    width: clamp(300px, 90vw, 450px);
     margin: 3rem auto;
     padding: 1rem 0;
     background-color: white;
@@ -13,7 +13,7 @@ export const OuterContainer = styled.div`
     text-align: center;
 
     h3 {
-        font-size: 12px;
+        font-size: 14px;
         span{
             color: ${props => props.valid ? '#17623b' : '#dd2727'};
         }
@@ -29,9 +29,9 @@ export const ResultDiv = styled.div`
     align-items: center;
     margin: 0 auto;
     margin-top: 1rem;
-    padding: 1rem 0;
+    padding: 1rem .5rem;
     border-radius: 10px;
-    width: clamp(300px, 90vw, 320px);
+    width: clamp(200px, 80vw, 350px);
     border: ${props => props.valid ? '#17623b' : '#dd2727'} 1px solid;
 
     img {
