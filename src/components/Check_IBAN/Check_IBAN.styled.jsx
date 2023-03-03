@@ -6,7 +6,7 @@ export const OuterContainer = styled.div`
 
     h1 {
         color: #051990;
-        font-size: clamp(1.5625rem, 1.3839rem + 0.8929vw, 2.5rem);
+        font-size: clamp(1.8rem, 1.3839rem + 0.8929vw, 2.5rem);
         padding-bottom: 1rem;
     }
 `;
